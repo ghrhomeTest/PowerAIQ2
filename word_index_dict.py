@@ -1,3 +1,4 @@
+#-*- encoding:utf-8 -*-
 import logging
 import pickle
 
@@ -13,8 +14,8 @@ def create_dictionaries(p_model):
     return w2indx, w2vec
 
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
-sentences = word2vec.Text8Corpus("分词后.txt")  # 加载语料
-model = word2vec.Word2Vec(sentences, size=200)  # 默认window=5
+sentences = word2vec.Text8Corpus("评价语料_分词后.txt")  # 加载语料
+model = word2vec.Word2Vec(sentences, size=100)  # 默认window=5
 model.save("词向量.model")
 model.wv.save_word2vec_format("词向量.txt", binary=False)
 

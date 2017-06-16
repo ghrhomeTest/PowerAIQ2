@@ -20,5 +20,5 @@ def splitSentence(inputFile, outputFile):
     fout.close()
 
 print(u"开始分词")
-splitSentence('分词前.txt', '分词后.txt')
+splitSentence('评价语料.txt', '评价语料_分词后.txt')
 print(u"分词完成")
